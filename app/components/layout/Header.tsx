@@ -15,7 +15,7 @@ export default function Header() {
   ];
 
   const whatsappMessage = "¡Hola Wisetag! Me interesa conocer más sobre sus productos NFC. ¿Podrían brindarme información?";
-  const whatsappUrl = `https://wa.me/1234567890?text=${encodeURIComponent(whatsappMessage)}`;
+  const whatsappUrl = `https://wa.me/3216982181?text=${encodeURIComponent(whatsappMessage)}`;
 
   return (
     <header className="bg-gray-950/95 backdrop-blur-sm border-b border-gray-800 sticky top-0 z-50">
