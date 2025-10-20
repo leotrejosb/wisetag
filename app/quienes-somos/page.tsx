@@ -27,7 +27,7 @@ export default function QuienesSomosPage() {
   ];
 
   const whatsappMessage = "¡Hola Wisetag! Me gustaría conocer más sobre su empresa y cómo pueden ayudarme con mis necesidades de tecnología NFC.";
-  const whatsappUrl = `https://wa.me/1234567890?text=${encodeURIComponent(whatsappMessage)}`;
+  const whatsappUrl = `https://wa.me/3216982181?text=${encodeURIComponent(whatsappMessage)}`;
 
   return (
     <>
@@ -141,7 +141,7 @@ export default function QuienesSomosPage() {
               </p>
               <div className="grid grid-cols-3 gap-8 max-w-2xl mx-auto">
                 <div>
-                  <div className="text-3xl font-bold text-blue-400 mb-2">2024</div>
+                  <div className="text-3xl font-bold text-blue-400 mb-2">2025</div>
                   <div className="text-gray-400 text-sm">Año de fundación</div>
                 </div>
                 <div>

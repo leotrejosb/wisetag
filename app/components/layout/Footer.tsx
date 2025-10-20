@@ -3,7 +3,7 @@ import { Zap, MessageCircle, Mail, MapPin } from 'lucide-react';
 
 export default function Footer() {
   const whatsappMessage = "¡Hola Wisetag! Me gustaría obtener más información sobre sus productos y servicios NFC.";
-  const whatsappUrl = `https://wa.me/1234567890?text=${encodeURIComponent(whatsappMessage)}`;
+  const whatsappUrl = `https://wa.me/3216982181?text=${encodeURIComponent(whatsappMessage)}`;
 
   return (
     <footer className="bg-black border-t border-gray-800">
@@ -79,7 +79,7 @@ export default function Footer() {
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
           <p className="text-gray-500 text-sm">
-            © 2024 Wisetag. Todos los derechos reservados.
+            © 2025 Wisetag. Todos los derechos reservados.
           </p>
         </div>
       </div>

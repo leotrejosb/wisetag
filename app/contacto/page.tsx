@@ -77,7 +77,7 @@ export default function ContactoPage() {
                     </div>
                     <div>
                       <h4 className="text-white font-semibold">Ubicación</h4>
-                      <p className="text-gray-400">Ciudad, País</p>
+                      <p className="text-gray-400">Pereira, Colombia</p>
                     </div>
                   </div>
                   

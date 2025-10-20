@@ -3,7 +3,7 @@ import { ArrowRight, MessageCircle } from 'lucide-react';
 
 export default function CallToAction() {
   const whatsappMessage = "¡Hola Wisetag! Estoy listo para comenzar con la tecnología NFC. ¿Podrían ayudarme a elegir el mejor plan para mis necesidades?";
-  const whatsappUrl = `https://wa.me/1234567890?text=${encodeURIComponent(whatsappMessage)}`;
+  const whatsappUrl = `https://wa.me/3216982181?text=${encodeURIComponent(whatsappMessage)}`;
 
   return (
     <section className="py-24 relative overflow-hidden">
