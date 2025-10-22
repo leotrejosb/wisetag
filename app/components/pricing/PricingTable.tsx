@@ -1,57 +1,61 @@
 import { Check, Star, Zap } from 'lucide-react';
 
+/*
+  Componente de Tabla de Precios (PricingTable)
+  Muestra los planes de servicio de Wisetag con los precios y características actualizados.
+  Utiliza los precios en COP y la estructura sostenible que definimos.
+*/
 export default function PricingTable() {
   const plans = [
     {
       name: "Plan Básico",
       subtitle: "Solo el dispositivo",
-      price: "Desde $25",
-      description: "Perfecto para usuarios que quieren configurar su NFC por cuenta propia.",
+      price: "$70.000",
+      priceSubtext: "Pago Único",
+      description: "La solución ideal para usuarios que ya tienen una presencia digital y solo necesitan el hardware.",
       features: [
-        "Dispositivo NFC de tu elección",
+        "Dispositivo NFC de elección",
         "Guía de configuración",
-        "Soporte técnico básico",
-        "Garantía de 1 año"
+        "Garantía de hardware por 1 año",
+        "Soporte técnico básico"
       ],
       cta: "Consultar Dispositivos",
       popular: false,
-      whatsappMessage: "¡Hola Wisetag! Estoy interesado en el 'Plan Básico' y me gustaría conocer más detalles sobre los dispositivos disponibles y precios."
+      whatsappMessage: "¡Hola Wisetag! Estoy interesado en el 'Plan Básico' de $70.000. ¿Qué dispositivos tienen disponibles?"
     },
     {
       name: "Plan Pro",
-      subtitle: "Dispositivo + Landing",
-      price: "Desde $75",
-      description: "La opción más popular. Incluye diseño y desarrollo de tu perfil digital profesional.",
+      subtitle: "Dispositivo + Perfil en Plantilla",
+      price: "$190.000",
+      priceSubtext: "Renovación anual: $80.000",
+      description: "El producto estrella. Perfecto para profesionales que necesitan una vCard digital de alto impacto.",
       features: [
         "Dispositivo NFC premium",
-        "Diseño de página de perfil personalizada",
-        "Hosting por 1 año incluido",
-        "3 revisiones de diseño",
-        "Analytics básicos",
+        "Diseño de perfil web basado en 3 plantillas premium",
+        "1 ronda de revisión de contenido",
+        "Alojamiento (Hosting) por 1 año incluido",
         "Soporte prioritario"
       ],
       cta: "¡Quiero el Plan Pro!",
       popular: true,
-      whatsappMessage: "¡Hola Wisetag! Me interesa mucho el 'Plan Pro' que incluye el dispositivo NFC y el diseño de la landing page. ¿Podrían darme más información sobre el proceso y tiempos de entrega?"
+      whatsappMessage: "¡Hola Wisetag! Me interesa mucho el 'Plan Pro' de $190.000 con el perfil basado en plantilla. ¿Podemos comenzar?"
     },
     {
       name: "Plan Premium",
-      subtitle: "Solución integral",
-      price: "Desde $150",
-      description: "La experiencia completa con mantenimiento continuo y actualizaciones regulares.",
+      subtitle: "Solución + Mantenimiento",
+      price: "$350.000",
+      priceSubtext: "Suscripción anual: $250.000",
+      description: "La solución 'llave en mano' para clientes que valoran su tiempo y necesitan actualizaciones periódicas.",
       features: [
         "Dispositivo NFC premium",
-        "Diseño web totalmente personalizado",
-        "Hosting ilimitado",
-        "Revisiones ilimitadas",
-        "Analytics avanzados",
-        "3 actualizaciones mensuales",
-        "Soporte 24/7",
-        "Dominio personalizado opcional"
+        "Diseño avanzado sobre plantilla",
+        "Hosting incluido (suscripción activa)",
+        "Hasta 4 actualizaciones de contenido por año",
+        "Soporte prioritario y analytics básicos"
       ],
       cta: "Comenzar Premium",
       popular: false,
-      whatsappMessage: "¡Hola Wisetag! Estoy interesado en el 'Plan Premium' con la solución integral. Me gustaría conocer todos los beneficios y el proceso completo de implementación."
+      whatsappMessage: "¡Hola Wisetag! Estoy interesado en el 'Plan Premium' de $350.000. Me gustaría entender más sobre el diseño avanzado y las actualizaciones."
     }
   ];
 
@@ -60,18 +64,19 @@ export default function PricingTable() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-3 gap-8">
           {plans.map((plan, index) => {
+            // URL de WhatsApp con mensaje personalizado para cada plan
             const whatsappUrl = `https://wa.me/+573216982181?text=${encodeURIComponent(plan.whatsappMessage)}`;
             
             return (
               <div
                 key={index}
-                className={`relative bg-gray-800/50 border rounded-xl p-8 ${
+                className={`relative bg-gray-800/50 border rounded-xl p-8 flex flex-col ${
                   plan.popular 
                     ? 'border-blue-600 ring-2 ring-blue-600/20 card-hover' 
                     : 'border-gray-700 card-hover'
                 }`}
               >
-                {/* Popular badge */}
+                {/* Insignia de Popular */}
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <div className="bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold flex items-center space-x-1">
@@ -84,11 +89,18 @@ export default function PricingTable() {
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <p className="text-blue-400 text-sm font-medium mb-4">{plan.subtitle}</p>
-                  <div className="text-4xl font-bold text-white mb-2">{plan.price}</div>
-                  <p className="text-gray-400 text-sm">{plan.description}</p>
+                  
+                  {/* Sección de Precio Actualizada */}
+                  <div className="text-4xl font-bold text-white">{plan.price}</div>
+                  {plan.priceSubtext && (
+                    <p className="text-yellow-400 text-xs font-semibold mt-1">
+                      {plan.priceSubtext}
+                    </p>
+                  )}
+                  <p className="text-gray-400 text-sm mt-4">{plan.description}</p>
                 </div>
 
-                <ul className="space-y-3 mb-8">
+                <ul className="space-y-3 mb-8 flex-grow">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-start space-x-3">
                       <Check className="w-5 h-5 text-blue-400 mt-0.5 flex-shrink-0" />
@@ -97,11 +109,12 @@ export default function PricingTable() {
                   ))}
                 </ul>
 
+                {/* Botón de Llamada a la Acción (CTA) */}
                 <a
                   href={whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`w-full inline-flex items-center justify-center space-x-2 px-6 py-3 rounded-lg font-semibold transition-all ${
+                  className={`w-full mt-auto inline-flex items-center justify-center space-x-2 px-6 py-3 rounded-lg font-semibold transition-all ${
                     plan.popular
                       ? 'bg-blue-600 hover:bg-blue-700 text-white glow-blue'
                       : 'border border-gray-600 hover:border-blue-600 text-gray-300 hover:text-white'
@@ -115,7 +128,7 @@ export default function PricingTable() {
           })}
         </div>
 
-        {/* Additional info */}
+        {/* Sección de ayuda */}
         <div className="mt-16 text-center">
           <div className="bg-gray-800/30 border border-gray-700 rounded-xl p-8 max-w-4xl mx-auto">
             <h3 className="text-2xl font-bold text-white mb-4">
