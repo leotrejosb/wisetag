@@ -60,7 +60,7 @@ export default function PricingTable() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-3 gap-8">
           {plans.map((plan, index) => {
-            const whatsappUrl = `https://wa.me/1234567890?text=${encodeURIComponent(plan.whatsappMessage)}`;
+            const whatsappUrl = `https://wa.me/+573216982181?text=${encodeURIComponent(plan.whatsappMessage)}`;
             
             return (
               <div
