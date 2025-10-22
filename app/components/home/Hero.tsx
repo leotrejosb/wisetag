@@ -3,7 +3,7 @@ import { ArrowRight, Zap } from 'lucide-react';
 
 export default function Hero() {
   const whatsappMessage = "¡Hola Wisetag! Me interesa conocer más sobre la tecnología NFC y sus productos. ¿Podrían brindarme información detallada?";
-  const whatsappUrl = `https://wa.me/3216982181?text=${encodeURIComponent(whatsappMessage)}`;
+  const whatsappUrl = `https://wa.me/+573216982181?text=${encodeURIComponent(whatsappMessage)}`;
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">

@@ -5,7 +5,7 @@ import { MessageCircle, Mail, MapPin, Clock } from 'lucide-react';
 
 export default function ContactoPage() {
   const whatsappMessage = "¡Hola Wisetag! Me gustaría ponerme en contacto con ustedes para conocer más sobre sus productos y servicios NFC.";
-  const whatsappUrl = `https://wa.me/3216982181?text=${encodeURIComponent(whatsappMessage)}`;
+  const whatsappUrl = `https://wa.me/+573216982181?text=${encodeURIComponent(whatsappMessage)}`;
 
   return (
     <>

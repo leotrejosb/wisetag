@@ -3,7 +3,7 @@ import { Zap, MessageCircle, Mail, MapPin } from 'lucide-react';
 
 export default function Footer() {
   const whatsappMessage = "¡Hola Wisetag! Me gustaría obtener más información sobre sus productos y servicios NFC.";
-  const whatsappUrl = `https://wa.me/3216982181?text=${encodeURIComponent(whatsappMessage)}`;
+  const whatsappUrl = `https://wa.me/+573216982181?text=${encodeURIComponent(whatsappMessage)}`;
 
   return (
     <footer className="bg-black border-t border-gray-800">

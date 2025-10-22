@@ -2,7 +2,7 @@ import { Gift, CreditCard } from 'lucide-react';
 
 export default function VolumeDiscount() {
   const whatsappMessage = "¡Hola Wisetag! Me interesa la oferta de descuento por volumen en tarjetas NFC. Necesito información sobre precios para pedidos de 10 o más tarjetas.";
-  const whatsappUrl = `https://wa.me/3216982181?text=${encodeURIComponent(whatsappMessage)}`;
+  const whatsappUrl = `https://wa.me/+573216982181?text=${encodeURIComponent(whatsappMessage)}`;
 
   return (
     <section className="py-24 bg-gradient-to-r from-blue-600/5 to-blue-800/5">

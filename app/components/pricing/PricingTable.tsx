@@ -126,7 +126,7 @@ export default function PricingTable() {
               para tus necesidades específicas.
             </p>
             <a
-              href="https://wa.me/3216982181?text=¡Hola%20Wisetag!%20Necesito%20ayuda%20para%20elegir%20el%20plan%20perfecto%20para%20mis%20necesidades.%20¿Podrían%20asesorarme?"
+              href="https://wa.me/+573216982181?text=¡Hola%20Wisetag!%20Necesito%20ayuda%20para%20elegir%20el%20plan%20perfecto%20para%20mis%20necesidades.%20¿Podrían%20asesorarme?"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center space-x-2 bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors"

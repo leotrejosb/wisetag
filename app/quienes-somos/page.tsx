@@ -27,7 +27,7 @@ export default function QuienesSomosPage() {
   ];
 
   const whatsappMessage = "¡Hola Wisetag! Me gustaría conocer más sobre su empresa y cómo pueden ayudarme con mis necesidades de tecnología NFC.";
-  const whatsappUrl = `https://wa.me/3216982181?text=${encodeURIComponent(whatsappMessage)}`;
+  const whatsappUrl = `https://wa.me/+573216982181?text=${encodeURIComponent(whatsappMessage)}`;
 
   return (
     <>
